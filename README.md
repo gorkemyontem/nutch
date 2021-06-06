@@ -1,5 +1,7 @@
 # SWE-599-Nutch-Crawler
-# https://twg.io/blog/things-i-wish-i-knew-about-docker-before-i-started-using-it/
+# NOTES
+
+https://twg.io/blog/things-i-wish-i-knew-about-docker-before-i-started-using-it/
 
 docker-compose build 
 docker-compose build — no-cache
