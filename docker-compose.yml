@@ -20,13 +20,13 @@ services:
             - be
     nutch:
         container_name: nutch
-        image: 'apache/nutch:release-1.17'
+        image: 'apache/nutch:latest'
         links:
             - solr
         environment:
-            - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+            - JAVA_HOME=/usr/lib/jvm/java-11-openjdk
         working_dir: /root/nutch
-        command: '/root/nutch/bin/crawl -i -D solr.server.url=http://localhost:8983/solr/nutch -s urls crawl 1'
+        command: '/root/nutch/bin/crawl -i -D solr.server.url=http://solr:8983/solr/nutch -s urls crawl 1'
         volumes:
             - ./nutch-conf/index-writers.xml:/root/nutch/conf/index-writers.xml
             - ./nutch-conf/nutch-site.xml:/root/nutch/conf/nutch-site.xml
