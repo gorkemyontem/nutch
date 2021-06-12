@@ -26,7 +26,7 @@ services:
         environment:
             - JAVA_HOME=/usr/lib/jvm/java-11-openjdk
         working_dir: /root/nutch
-        command: '/root/nutch/bin/crawl -i -D solr.server.url=http://solr:8983/solr/nutch -s urls crawl 1'
+        command: '/root/nutch/bin/nutch startserver -port 8081 -host localhost'
         volumes:
             - ./nutch-conf/index-writers.xml:/root/nutch/conf/index-writers.xml
             - ./nutch-conf/nutch-site.xml:/root/nutch/conf/nutch-site.xml
