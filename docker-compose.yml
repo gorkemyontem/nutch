@@ -34,6 +34,9 @@ services:
             - ./nutch-conf/seed.txt:/root/nutch/urls/seed.txt
         depends_on:
             - solr
+        ports:
+            - "8080:8080"
+            - "8081:8081"
         networks:
             - be
 networks:
